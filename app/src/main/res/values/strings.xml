@@ -6,4 +6,5 @@
     <string name="llegada">llegada </string>
     <string name="eventos">evento </string>
     <string name="alojamiento">alojamiento</string>
+    <string name="imagenfondo">ImagenFondo</string>
 </resources>
