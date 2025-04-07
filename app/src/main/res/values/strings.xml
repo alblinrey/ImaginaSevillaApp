@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ImaginaSevillaApp</string>
+    <string name="logo">Logo</string>
+    <string name="imagina_sevilla">IMAGINA SEVILLA</string>
+    <string name="imprescindibles">Imprescindibles</string>
+    <string name="llegada">llegada </string>
+    <string name="eventos">evento </string>
+    <string name="alojamiento">alojamiento</string>
 </resources>

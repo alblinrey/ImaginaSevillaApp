@@ -7,13 +7,104 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+
+    <ImageView
+        android:id="@+id/fondo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagen_fondo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@null" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="87dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/imagina_sevilla"
+        android:textColor="#1B1B1B"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/btn_imprescindibles"
+        android:layout_width="136dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="224dp"
+        android:contentDescription="@string/imprescindibles"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imprescindibles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.RoundedCorners" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/btn_llegada"
+        android:layout_width="136dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="224dp"
+        android:contentDescription="@string/llegada"
+        android:scaleType="centerCrop"
+        android:src="@drawable/llegar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.RoundedCorners" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/btn_eventos"
+        android:layout_width="136dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="404dp"
+        android:contentDescription="@string/eventos"
+        android:scaleType="centerCrop"
+        android:src="@drawable/eventos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.RoundedCorners" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/btn_alojamiento"
+        android:layout_width="136dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="404dp"
+        android:contentDescription="@string/alojamiento"
+        android:scaleType="centerCrop"
+        android:src="@drawable/alojamiento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.RoundedCorners" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
