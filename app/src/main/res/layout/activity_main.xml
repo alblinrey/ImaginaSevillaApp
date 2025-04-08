@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#274A7E8A"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,10 +22,10 @@
             android:layout_marginTop="40dp"
             android:fontFamily="@font/poppins_semibold"
             android:text="@string/app_name"
-            android:textColor="@color/lavender"
+            android:textColor="#2979FF"
             android:textSize="22sp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/imaginaSevillaImage"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -34,10 +34,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:text="@string/slogan"
-            android:textColor="@color/lavender"
+            android:textColor="#1565C0"
             android:textSize="17sp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/imaginaSevillaImage"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imaginaSevillaName" />
 
         <ImageView
@@ -45,10 +45,10 @@
             android:layout_width="0dp"
             android:layout_height="160dp"
             android:layout_marginEnd="16dp"
-            android:src="@drawable/logo"
             android:contentDescription="@string/logo_desc"
-            app:layout_constraintStart_toEndOf="@id/imaginaSevillaName"
+            android:src="@drawable/logo"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imaginaSevillaName"
             app:layout_constraintTop_toTopOf="parent" />
 
         <!-- Row 1 -->
@@ -59,16 +59,16 @@
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
             android:padding="10dp"
-            app:layout_constraintTop_toBottomOf="@id/imaginaSevillaImage"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/imaginaSevillaImage">
 
             <!-- Card: Imprescindibles -->
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="10dp"
+                android:layout_weight="1"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="20dp">
 
@@ -82,8 +82,8 @@
                         android:layout_height="70dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp"
-                        android:src="@drawable/imprescindibles"
-                        android:contentDescription="@string/imprescindibles_desc" />
+                        android:contentDescription="@string/imprescindibles_desc"
+                        android:src="@drawable/imprescindibles" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -93,7 +93,7 @@
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppins_semibold"
                         android:text="@string/imprescindibles"
-                        android:textColor="@color/lavender"
+                        android:textColor="#448AFF"
                         android:textSize="18sp" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -102,8 +102,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="10dp"
+                android:layout_weight="1"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="20dp">
 
@@ -117,8 +117,8 @@
                         android:layout_height="70dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp"
-                        android:src="@drawable/alojamiento"
-                        android:contentDescription="@string/alojamiento_desc" />
+                        android:contentDescription="@string/alojamiento_desc"
+                        android:src="@drawable/alojamiento" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -128,7 +128,7 @@
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppins_semibold"
                         android:text="@string/alojamiento"
-                        android:textColor="@color/lavender"
+                        android:textColor="#448AFF"
                         android:textSize="18sp" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -142,16 +142,16 @@
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
             android:padding="10dp"
-            app:layout_constraintTop_toBottomOf="@id/row1"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/row1">
 
             <!-- Card: Eventos -->
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="10dp"
+                android:layout_weight="1"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="20dp">
 
@@ -165,8 +165,8 @@
                         android:layout_height="70dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp"
-                        android:src="@drawable/eventos"
-                        android:contentDescription="@string/eventos_desc" />
+                        android:contentDescription="@string/eventos_desc"
+                        android:src="@drawable/eventos" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -176,7 +176,7 @@
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppins_semibold"
                         android:text="@string/eventos"
-                        android:textColor="@color/lavender"
+                        android:textColor="#448AFF"
                         android:textSize="18sp" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -185,8 +185,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="10dp"
+                android:layout_weight="1"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="20dp">
 
@@ -200,8 +200,8 @@
                         android:layout_height="70dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp"
-                        android:src="@drawable/llegada"
-                        android:contentDescription="@string/llegada_desc" />
+                        android:contentDescription="@string/llegada_desc"
+                        android:src="@drawable/llegada" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -211,7 +211,7 @@
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppins_semibold"
                         android:text="@string/llegada"
-                        android:textColor="@color/lavender"
+                        android:textColor="#448AFF"
                         android:textSize="18sp" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
