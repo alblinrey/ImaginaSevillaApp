@@ -1,10 +1,15 @@
 <resources>
-    <string name="app_name">ImaginaSevillaApp</string>
-    <string name="logo">Logo</string>
-    <string name="imagina_sevilla">IMAGINA SEVILLA</string>
+
+    <string name="app_name">Imagina Sevilla</string>
+    <string name="slogan">Siéntela</string>
     <string name="imprescindibles">Imprescindibles</string>
-    <string name="llegada">llegada </string>
-    <string name="eventos">evento </string>
-    <string name="alojamiento">alojamiento</string>
-    <string name="imagenfondo">ImagenFondo</string>
+    <string name="imprescindibles_desc">Icono de la sección Imprescindibles</string>
+    <string name="alojamiento">¿Dónde alojarme?</string>
+    <string name="alojamiento_desc">Icono de la sección alojamiento</string>
+    <string name="eventos">Eventos</string>
+    <string name="eventos_desc">Icono de la sección eventos</string>
+    <string name="llegada">¿Cómo llegar?</string>
+    <string name="llegada_desc">Icono de la sección cómo llegar</string>
+    <string name="logo_desc">Logo de Imagina Sevilla</string>
+
 </resources>
