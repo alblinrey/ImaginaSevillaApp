@@ -11,5 +11,6 @@
     <string name="llegada">¿Cómo llegar?</string>
     <string name="llegada_desc">Icono de la sección cómo llegar</string>
     <string name="logo_desc">Logo de Imagina Sevilla</string>
+    <string name="Inicio">inicio</string>
 
 </resources>

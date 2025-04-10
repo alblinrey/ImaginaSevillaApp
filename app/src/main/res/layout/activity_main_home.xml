@@ -6,20 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#274A7E8A"
-    tools:context=".MainActivity">
+    tools:context=".HomeMain">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="24dp">
 
         <TextView
             android:id="@+id/imaginaSevillaName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="36dp"
             android:fontFamily="@font/poppins_semibold"
             android:text="@string/app_name"
             android:textColor="#2979FF"
@@ -28,23 +28,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/eslogan"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:text="@string/slogan"
-            android:textColor="#1565C0"
-            android:textSize="17sp"
-            app:layout_constraintEnd_toStartOf="@id/imaginaSevillaImage"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imaginaSevillaName" />
 
         <ImageView
             android:id="@+id/imaginaSevillaImage"
             android:layout_width="0dp"
-            android:layout_height="160dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="10dp"
             android:contentDescription="@string/logo_desc"
             android:src="@drawable/logo"
             app:layout_constraintEnd_toEndOf="parent"
@@ -55,8 +44,8 @@
         <LinearLayout
             android:id="@+id/row1"
             android:layout_width="0dp"
-            android:layout_height="175dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="40dp"
             android:orientation="horizontal"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -138,8 +127,8 @@
         <LinearLayout
             android:id="@+id/row2"
             android:layout_width="0dp"
-            android:layout_height="175dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -201,7 +190,8 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp"
                         android:contentDescription="@string/llegada_desc"
-                        android:src="@drawable/llegada" />
+                        android:src="@drawable/llegada"
+                        tools:ignore="ImageContrastCheck" />
 
                     <TextView
                         android:layout_width="wrap_content"
