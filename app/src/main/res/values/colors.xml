@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lavender">#8692f7</color>
     <color name="bright_blue">#2979FF</color>
+    <color name="splash_background">#bbd0ee</color>
 </resources>
