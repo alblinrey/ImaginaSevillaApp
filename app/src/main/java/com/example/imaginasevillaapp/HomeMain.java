@@ -21,5 +21,9 @@ public class HomeMain extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        // Establece el título en la barra superior
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(R.string.title_home); // "Inicio"
+        }
     }
 }
