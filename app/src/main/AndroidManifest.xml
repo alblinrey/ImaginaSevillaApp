@@ -22,6 +22,12 @@
             </intent-filter>
         </activity>
 
+        <!-- Actividad de la tarjetas -->
+        <activity android:name=".ImprescindiblesActivity"/>
+        <activity android:name=".AlojamientoActivity"/>
+        <activity android:name=".EventosActivity"/>
+        <activity android:name=".LlegadaActivity"/>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
