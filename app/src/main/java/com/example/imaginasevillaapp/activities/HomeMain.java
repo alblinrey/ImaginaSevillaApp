@@ -1,4 +1,4 @@
-package com.example.imaginasevillaapp;
+package com.example.imaginasevillaapp.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.imaginasevillaapp.R;
 
 public class HomeMain extends AppCompatActivity {
 

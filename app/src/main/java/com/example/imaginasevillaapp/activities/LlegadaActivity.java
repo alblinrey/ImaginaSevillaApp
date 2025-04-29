@@ -1,7 +1,9 @@
-package com.example.imaginasevillaapp;
+package com.example.imaginasevillaapp.activities;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.imaginasevillaapp.R;
 
 public class LlegadaActivity extends AppCompatActivity {
 

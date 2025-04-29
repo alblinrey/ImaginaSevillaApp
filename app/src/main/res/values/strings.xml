@@ -12,6 +12,11 @@
     <string name="logo_desc">Logo de Imagina Sevilla</string>
     <string name="Inicio">Imagina Sevilla</string>
     <string name="title_home">Inicio</string>
+    <string name="alcazar">Real Alcázar de Sevilla</string>
+    <string name="catedral">Catedral de Sevilla</string>
+    <string name="plazaEspaña">Plaza de España</string>
+    <string name="parqueMLuisa">Parque de María Luisa</string>
+    <string name="torreOro">Torre del Oro</string>
 
 
 </resources>

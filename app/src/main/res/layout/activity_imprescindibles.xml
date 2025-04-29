@@ -1,22 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    android:background="#FFF">
+    android:padding="16dp"
+    android:background="#274A7E8A">
 
-    <TextView
-        android:id="@+id/textImprescindibles"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Aquí irá el contenido de los imprescindibles."
-        android:textSize="20sp"
-        android:textColor="#2979FF"
-        android:textStyle="bold"
+    <!-- ScrollView para todo el contenido -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Contenedor vertical para todo el contenido desplazable -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <!-- Título con icono a la derecha -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="25dp">
+
+                <TextView
+                    android:id="@+id/textImprescindibles"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/imprescindibles"
+                    android:textColor="@color/bright_blue"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/iconImprescindibles"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/imprescindibles"
+                    android:layout_gravity="end" />
+            </LinearLayout>
+
+            <!-- Tarjeta Alcázar -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardrealAlcazar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:id="@+id/AlcazarNombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/alcazar"
+                        android:textSize="14sp"
+                        android:textColor="@color/letrastarjetas"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginBottom="8dp"
+                        android:layout_gravity="center_horizontal"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Tarjeta Catedral -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCatedral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:id="@+id/CatedralNombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/catedral"
+                        android:textSize="14sp"
+                        android:textColor="@color/letrastarjetas"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginBottom="8dp"
+                        android:layout_gravity="center_horizontal"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Tarjeta Plaza de España -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardPlazaEspaña"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:id="@+id/PlazaNombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plazaEspaña"
+                        android:textSize="14sp"
+                        android:textColor="@color/letrastarjetas"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginBottom="0dp"
+                        android:layout_gravity="center_horizontal"
+                        />
+                    <TextView
+                        android:id="@+id/ParqueNombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/parqueMLuisa"
+                        android:textSize="14sp"
+                        android:textColor="@color/letrastarjetas"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginBottom="0dp"
+                        android:layout_gravity="center_horizontal"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Tarjeta Torre del Oro -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTorreOro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:id="@+id/TorreNombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/torreOro"
+                        android:textSize="14sp"
+                        android:textColor="@color/letrastarjetas"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginBottom="8dp"
+                        android:layout_gravity="center_horizontal"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
