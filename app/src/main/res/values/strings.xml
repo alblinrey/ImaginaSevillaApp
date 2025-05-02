@@ -17,6 +17,8 @@
     <string name="plazaEspaña">Plaza de España</string>
     <string name="parqueMLuisa">Parque de María Luisa</string>
     <string name="torreOro">Torre del Oro</string>
+    <string name="default_web_client_id">320030616094-p6d1kgu0l2kt7ta50k4771e4mqg3j0qq.apps.googleusercontent.com</string>
+    <string name="inicioSesion">Iniciar Sesión</string>
 
 
 </resources>

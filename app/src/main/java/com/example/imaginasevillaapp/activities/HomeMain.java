@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.imaginasevillaapp.R;
+import com.google.android.gms.common.SignInButton;
 
 public class HomeMain extends AppCompatActivity {
 
@@ -68,6 +69,15 @@ public class HomeMain extends AppCompatActivity {
             public void onClick(View v) {
                 // Abrimos la actividad de Llegada
                 Intent intent = new Intent(HomeMain.this, LlegadaActivity.class);
+                startActivity(intent);
+            }
+        });
+        //Para que el botón de inicio de sesión lleve al LoginAvtivity.
+        SignInButton btnSignIn = findViewById(R.id.btnGoogleSignIn);
+        btnSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeMain.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

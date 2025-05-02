@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ImaginaSevilla"
         tools:targetApi="31">
-
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.HomeMain"
             android:exported="true">
@@ -31,7 +33,7 @@
         <activity android:name=".activities.AlcazarActivity" />
         <activity android:name=".activities.CatedralActivity" />
         <activity android:name=".activities.PlazaActivity" />
-        <activity android:name=".activities.TorreActivity"/>
+        <activity android:name=".activities.TorreActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
