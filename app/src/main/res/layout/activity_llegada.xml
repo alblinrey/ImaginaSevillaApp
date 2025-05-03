@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#274A7E8A">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,6 +15,7 @@
             android:id="@+id/imagenLlegada"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:contentDescription="@string/imagenDescLlegada"
             android:scaleType="centerCrop"
             android:src="@drawable/llegada_cabecera" />
 
@@ -21,7 +23,7 @@
             android:id="@+id/textoTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="¿Cómo llegar a Sevilla?"
+            android:text="@string/llegadaTitulo"
             android:textColor="#448AFF"
             android:textSize="24sp"
             android:fontFamily="@font/poppins_bold"

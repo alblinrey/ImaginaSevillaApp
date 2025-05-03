@@ -10,7 +10,7 @@
     <string name="llegada">¿Cómo llegar?</string>
     <string name="llegada_desc">Icono de la sección cómo llegar</string>
     <string name="logo_desc">Logo de Imagina Sevilla</string>
-    <string name="Inicio">Imagina Sevilla</string>
+    <string name="Inicio" translatable="false">Imagina Sevilla</string>
     <string name="title_home">Inicio</string>
     <string name="alcazar">Real Alcázar de Sevilla</string>
     <string name="catedral">Catedral de Sevilla</string>
@@ -18,7 +18,15 @@
     <string name="parqueMLuisa">Parque de María Luisa</string>
     <string name="torreOro">Torre del Oro</string>
     <string name="default_web_client_id">320030616094-p6d1kgu0l2kt7ta50k4771e4mqg3j0qq.apps.googleusercontent.com</string>
-    <string name="inicioSesion">Iniciar Sesión</string>
+    <string name="inicioSesion">Descubre más sobre Sevilla…</string>
+    <string name="texto_login">Aquí puede descubrir una Sevilla más auténtica, solo tienes que registrarte con tu cuenta de GMail</string>
+    <string name="textoTituloAlojamiento">¿Dónde alojarse en Sevilla?</string>
+    <string name="formHelp">¡Envíanos tus dudas y/o sugerencias!</string>
+    <string name="hint_form">Escriba aquí...</string>
+    <string name="txbtnEnviarForm">Enviar</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="llegadaTitulo">¿Cómo llegar a Sevilla?</string>
+    <string name="imagenDescLlegada">TODO</string>
 
 
 </resources>

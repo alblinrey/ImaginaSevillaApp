@@ -2,7 +2,10 @@ package com.example.imaginasevillaapp.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -72,9 +75,10 @@ public class HomeMain extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //Para que el botón de inicio de sesión lleve al LoginAvtivity.
-        SignInButton btnSignIn = findViewById(R.id.btnGoogleSignIn);
-        btnSignIn.setOnClickListener(new View.OnClickListener() {
+        //Para que el botón Descubre más sobre Sevilla... lleve al LoginAvtivity.
+
+        Button btnDescubreMas = findViewById(R.id.btnDescubreMas);
+        btnDescubreMas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeMain.this, LoginActivity.class);
@@ -82,5 +86,22 @@ public class HomeMain extends AppCompatActivity {
             }
         });
 
+    //Carga el menú que es donde se ha creado el icono del formumaliro.
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_home, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_help) {
+            Intent intent = new Intent(this, FormActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
+

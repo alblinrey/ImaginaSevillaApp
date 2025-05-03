@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#274A7E8A"
+    android:padding="32dp">
+
+
+    <!-- Texto descriptivo encima del botón -->
+    <ImageView
+        android:id="@+id/imagenLlegada"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/collage_sevilla" />
+
+    <TextView
+        android:id="@+id/textIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingBottom="10dp"
+        android:paddingTop="24dp"
+        android:text="@string/texto_login"
+        android:textAlignment="center"
+        android:textColor="@color/letrastarjetas"
+        android:textSize="17sp"
+        tools:ignore="TextContrastCheck" />
+
+    <!-- Botón de inicio de sesión de Google -->
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btnGoogleSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

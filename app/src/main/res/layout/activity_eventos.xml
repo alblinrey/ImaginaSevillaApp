@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
-    android:background="#FFF">
+    android:background="#274A7E8A">
 
     <TextView
         android:id="@+id/textEventos"

@@ -45,5 +45,7 @@ dependencies {
     annotationProcessor libs.compiler
     implementation libs.firebase.auth
     implementation libs.play.services.auth
+    implementation libs.osmdroid.android
+
 
 }
