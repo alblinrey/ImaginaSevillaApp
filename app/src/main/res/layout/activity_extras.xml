@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#274A7E8A"
+    tools:context=".activities.ExtrasActivity">
+
+    <!-- Texto encima del listado de items de los extras -->
+    <TextView
+        android:id="@+id/tvEncabezado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/zonaUsuarios"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="#FFFFFF"
+        android:background="#88274A7E"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:contentDescription="@string/cabeceraDescription" />
+
+    <!-- RecyclerView para los extras -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewExtras"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        android:contentDescription="@string/cabeceraDescription"/>
+
+</LinearLayout>

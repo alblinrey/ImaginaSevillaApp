@@ -11,13 +11,15 @@ public class Monumentos {
     private String webOficial;
     private String imagenUrl;
 
-    // Constructor vacío requerido por Firebase
-    public Monumentos() {
+    // Campo para almacenar el ID del documento
+    private String id;
 
+    // Constructor vacío (requerido para Firestore)
+    public Monumentos() {
     }
 
-    public Monumentos(String nombre, String descripcion, String direccion, String horarios,
-                     String info, String mapaUrl, String precio, String webOficial, String imagenUrl) {
+    // Constructor con los campos del monumento
+    public Monumentos(String nombre, String descripcion, String direccion, String horarios, String info, String mapaUrl, String precio, String webOficial, String imagenUrl) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.direccion = direccion;
@@ -29,31 +31,93 @@ public class Monumentos {
         this.imagenUrl = imagenUrl;
     }
 
-    // Getters y setters para usos en otras clases.
-    public String getNombre() { return nombre; }
-    public void setNombre(String nombre) { this.nombre = nombre; }
+    // Getter y setter para el nombre
+    public String getNombre() {
+        return nombre;
+    }
 
-    public String getDescripcion() { return descripcion; }
-    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-    public String getDireccion() { return direccion; }
-    public void setDireccion(String direccion) { this.direccion = direccion; }
+    // Getter y setter para la descripcion
+    public String getDescripcion() {
+        return descripcion;
+    }
 
-    public String getHorarios() { return horarios; }
-    public void setHorarios(String horarios) { this.horarios = horarios; }
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
 
-    public String getInfo() { return info; }
-    public void setInfo(String info) { this.info = info; }
+    // Getter y setter para la direccion
+    public String getDireccion() {
+        return direccion;
+    }
 
-    public String getMapaUrl() { return mapaUrl; }
-    public void setMapaUrl(String mapaUrl) { this.mapaUrl = mapaUrl; }
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
 
-    public String getPrecio() { return precio; }
-    public void setPrecio(String precio) { this.precio = precio; }
+    // Getter y setter para horarios
+    public String getHorarios() {
+        return horarios;
+    }
 
-    public String getWebOficial() { return webOficial; }
-    public void setWebOficial(String webOficial) { this.webOficial = webOficial; }
+    public void setHorarios(String horarios) {
+        this.horarios = horarios;
+    }
 
-    public String getImagenUrl() { return imagenUrl; }
-    public void setImagenUrl(String imagenUrl) {this.imagenUrl = imagenUrl;}
+    // Getter y setter para info
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
+
+    // Getter y setter para mapaUrl
+    public String getMapaUrl() {
+        return mapaUrl;
+    }
+
+    public void setMapaUrl(String mapaUrl) {
+        this.mapaUrl = mapaUrl;
+    }
+
+    // Getter y setter para precio
+    public String getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(String precio) {
+        this.precio = precio;
+    }
+
+    // Getter y setter para webOficial
+    public String getWebOficial() {
+        return webOficial;
+    }
+
+    public void setWebOficial(String webOficial) {
+        this.webOficial = webOficial;
+    }
+
+    // Getter y setter para imagenUrl
+    public String getImagenUrl() {
+        return imagenUrl;
+    }
+
+    public void setImagenUrl(String imagenUrl) {
+        this.imagenUrl = imagenUrl;
+    }
+
+    // Getter y setter para el ID
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }

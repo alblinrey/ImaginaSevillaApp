@@ -22,11 +22,14 @@
     <string name="texto_login">Aquí puede descubrir una Sevilla más auténtica, solo tienes que registrarte con tu cuenta de GMail</string>
     <string name="textoTituloAlojamiento">¿Dónde alojarse en Sevilla?</string>
     <string name="formHelp">¡Envíanos tus dudas y/o sugerencias!</string>
-    <string name="hint_form">Escriba aquí...</string>
+    <string name="hint_form">Escriba aquí…</string>
     <string name="txbtnEnviarForm">Enviar</string>
     <string name="ayuda">Ayuda</string>
     <string name="llegadaTitulo">¿Cómo llegar a Sevilla?</string>
     <string name="imagenDescLlegada">TODO</string>
+    <string name="zonaUsuarios">🎁 Aquí tienes información exclusiva solo para ti</string>
+    <string name="descriptionImagen">TODO</string>
+    <string name="cabeceraDescription">Encabezado con información de los extras</string>
 
 
 </resources>

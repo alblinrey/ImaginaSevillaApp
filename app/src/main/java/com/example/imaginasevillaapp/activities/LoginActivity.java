@@ -74,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    //Método para autenticar al usuario con Firebase usando el token de Google.
+      // Autenticar al usuario con Firebase usando el token de Google.
     private void firebaseAuthWithGoogle(String idToken) {
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
         mAuth.signInWithCredential(credential)
@@ -85,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                                 .setTitle("Inicio de sesión")
                                 .setMessage("¡Bienvenido " + user.getDisplayName() + "!\nTu sesión se ha iniciado correctamente.")
                                 .setPositiveButton("Continuar", (dialog, which) -> {
-                                    startActivity(new Intent(LoginActivity.this, HomeMain.class));
+                                    startActivity(new Intent(LoginActivity.this, ExtrasActivity.class)); //se inicia sesion y lleva al Extras.
                                     finish();
                                 })
                                 .show();
