@@ -18,6 +18,16 @@
         tools:ignore="TextContrastCheck" />
 
     <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:autofillHints="email"
+        android:hint="@string/hintMail"
+        android:inputType="textEmailAddress"
+        tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+    <EditText
         android:id="@+id/etSugerencia"
         android:layout_width="match_parent"
         android:layout_height="250dp"

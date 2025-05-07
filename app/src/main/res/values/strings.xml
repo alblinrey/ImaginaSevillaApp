@@ -30,6 +30,8 @@
     <string name="zonaUsuarios">🎁 Aquí tienes información exclusiva solo para ti</string>
     <string name="descriptionImagen">TODO</string>
     <string name="cabeceraDescription">Encabezado con información de los extras</string>
+    <string name="hintMail">Correo Electrónico</string>
+    <string name="eventosTitulo">Eventos importantes en Sevilla</string>
 
 
 </resources>

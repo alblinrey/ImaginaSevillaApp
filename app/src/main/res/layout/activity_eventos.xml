@@ -1,22 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
+    android:padding="16dp"
     android:background="#274A7E8A">
 
-    <TextView
-        android:id="@+id/textEventos"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Aquí irá el contenido de eventos."
-        android:textSize="20sp"
-        android:textColor="#2979FF"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imagenEventos"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/imagenDescLlegada"
+            android:scaleType="centerCrop"
+            android:src="@drawable/collage_eventos" />
+
+        <TextView
+            android:id="@+id/textoTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/eventosTitulo"
+            android:textColor="#448AFF"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/textoEventos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:paddingTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

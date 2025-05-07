@@ -26,6 +26,11 @@ public class ExtrasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_extras);
 
+        //Esto hace que en el ActionBar exista una flecha como Up Button.
+        if (getSupportActionBar() !=null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
         // Inicializar Firestore
         db = FirebaseFirestore.getInstance();
 
@@ -61,4 +66,15 @@ public class ExtrasActivity extends AppCompatActivity {
                 })
                 .addOnFailureListener(Throwable::printStackTrace);
     }
+    // Metodo de AppCompatActivity para que la el up button del Action Bar retroceda, en este caso
+    //lo dirigimos al HomeMain.
+    @Override
+    public boolean onSupportNavigateUp() {
+        // Al pulsar la flechita, volver siempre al HomeMain
+        Intent intent = new Intent(this, HomeMain.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+        return true;
+    }
+
 }

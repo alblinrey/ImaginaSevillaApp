@@ -11,7 +11,7 @@ public class Monumentos {
     private String webOficial;
     private String imagenUrl;
 
-    // Campo para almacenar el ID del documento
+    // Campo para almacenar el ID del documento en Firebase.
     private String id;
 
     // Constructor vacío (requerido para Firestore)
@@ -112,7 +112,7 @@ public class Monumentos {
         this.imagenUrl = imagenUrl;
     }
 
-    // Getter y setter para el ID
+    // Getter y setter para el ID en la colección de FIREBASE.
     public String getId() {
         return id;
     }
