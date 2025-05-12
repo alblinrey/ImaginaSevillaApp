@@ -32,6 +32,14 @@
     <string name="cabeceraDescription">Encabezado con información de los extras</string>
     <string name="hintMail">Correo Electrónico</string>
     <string name="eventosTitulo">Eventos importantes en Sevilla</string>
+    <string name="NombreUser">Nombre</string>
+    <string name="apellidosUser">Apellidos</string>
+    <string name="botonGuardarUser">Guardar perfil</string>
+    <string name="botonEliminarUser">Eliminar cuenta</string>
+    <string name="perfil">Perfil</string>
+    <string name="correo_ejemplo">correo@ejemplo.com</string>
+    <string name="cerrarSesion">Cerrar sesión</string>
+    <string name="inicioSesionUser">Iniciar sesión</string>
 
 
 </resources>

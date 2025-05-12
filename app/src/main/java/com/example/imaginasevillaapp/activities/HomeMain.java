@@ -86,8 +86,10 @@ public class HomeMain extends AppCompatActivity {
             }
         });
 
-    //Carga el menú que es donde se ha creado el icono del formumaliro.
     }
+
+    //Carga el menú que es donde se ha creado el icono del formulario y el del User en el action bar.
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_home, menu);
@@ -96,12 +98,22 @@ public class HomeMain extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.action_help) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_help) {
+            // Ir al formulario de ayuda
             Intent intent = new Intent(this, FormActivity.class);
             startActivity(intent);
             return true;
+        } else if (id == R.id.action_perfil) {
+            // Ir al perfil de usuario
+            Intent intent = new Intent(this, UserActivity.class);
+            startActivity(intent);
+            return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 }
+
 

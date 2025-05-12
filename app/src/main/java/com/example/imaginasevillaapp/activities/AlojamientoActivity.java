@@ -28,7 +28,7 @@ public class AlojamientoActivity extends AppCompatActivity {
         //Texto que aparece con el formato dado en el activity_alojamiento.xml.
         TextView texto = findViewById(R.id.textoAlojamiento);
 
-        //Tengo en HTML que es el que aparecerá en el apartado de alojamiento.
+        //Texto en HTML que es el que aparecerá en el apartado de alojamiento.
         String contenido =
                 "<h3>🏨 Mejores zonas para alojarse en Sevilla</h3>" +
                         "<p>Existe una amplia oferta hotelera repartida por la ciudad que se ajusta a todo tipo de bolsillos, habiendo desde hoteles de lujo, hasta hostales de habitaciones compartidas. Solo tienes que elegir lo que mejor se ajuste a tus preferencias.</p>" +

@@ -6,4 +6,11 @@
         android:icon="@drawable/ic_help"
         android:title="@string/ayuda"
         app:showAsAction="ifRoom" />
+
+    <item
+    android:id="@+id/action_perfil"
+    android:icon="@drawable/ic_user"
+    android:title="@string/perfil"
+    app:showAsAction="always" />
+
 </menu>
