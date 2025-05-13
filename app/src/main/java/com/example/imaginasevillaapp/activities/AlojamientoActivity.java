@@ -1,5 +1,6 @@
 package com.example.imaginasevillaapp.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.Html;
@@ -24,6 +25,11 @@ public class AlojamientoActivity extends AppCompatActivity {
                 PreferenceManager.getDefaultSharedPreferences(getApplicationContext()));
 
         setContentView(R.layout.activity_alojamiento);
+
+        //Esto hace que en el ActionBar exista una flecha como Up Button.
+        if (getSupportActionBar() !=null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         //Texto que aparece con el formato dado en el activity_alojamiento.xml.
         TextView texto = findViewById(R.id.textoAlojamiento);
@@ -70,5 +76,15 @@ public class AlojamientoActivity extends AppCompatActivity {
         marker.setTitle(title);
         marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
         map.getOverlays().add(marker);
+    }
+    // Metodo de AppCompatActivity para que la el up button del Action Bar retroceda, en este caso
+    //lo dirigimos al HomeMain.
+    @Override
+    public boolean onSupportNavigateUp() {
+        // Al pulsar la flechita, volver siempre al HomeMain
+        Intent intent = new Intent(this, HomeMain.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+        return true;
     }
 }

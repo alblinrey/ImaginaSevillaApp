@@ -1,5 +1,6 @@
 package com.example.imaginasevillaapp.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -26,6 +27,11 @@ public class AlcazarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alcazar);
+
+        //Esto hace que en el ActionBar exista una flecha como Up Button.
+        if (getSupportActionBar() !=null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         // Referencias UI
         tvNombre = findViewById(R.id.tvNombre);
@@ -83,5 +89,15 @@ public class AlcazarActivity extends AppCompatActivity {
         }).addOnFailureListener(e -> {
             Toast.makeText(this, "Error al cargar datos", Toast.LENGTH_SHORT).show();
         });
+    }
+    // Metodo de AppCompatActivity para que la el up button del Action Bar retroceda, en este caso
+    //lo dirigimos al HomeMain.
+    @Override
+    public boolean onSupportNavigateUp() {
+        // Al pulsar la flechita, volver siempre al HomeMain
+        Intent intent = new Intent(this, HomeMain.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+        return true;
     }
 }

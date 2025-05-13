@@ -14,26 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ImaginaSevilla"
         tools:targetApi="31">
-        <activity
-            android:name=".activities.UserActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.DetalleExtraActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.ExtrasActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.FormActivity"
-            android:exported="false" />
+
         <activity
             android:name=".activities.HomeMain"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity> <!-- Actividad de la tarjetas -->
         <activity android:name=".activities.ImprescindiblesActivity" />
         <activity android:name=".activities.AlojamientoActivity" />
@@ -44,6 +35,11 @@
         <activity android:name=".activities.PlazaActivity" />
         <activity android:name=".activities.TorreActivity" />
         <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.DetalleExtraActivity" />
+        <activity android:name=".activities.UserActivity" />
+        <activity android:name=".activities.ExtrasActivity" />
+        <activity android:name=".activities.FormActivity" />
+
 
         <meta-data
             android:name="preloaded_fonts"
