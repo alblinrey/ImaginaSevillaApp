@@ -1,5 +1,6 @@
 package com.example.imaginasevillaapp.models;
 
+/** @noinspection ALL*/
 public class Monumentos {
     private String nombre;
     private String descripcion;

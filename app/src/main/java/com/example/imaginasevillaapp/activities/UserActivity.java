@@ -19,10 +19,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class UserActivity extends AppCompatActivity {
 
-    private TextView tvNombre, tvEmail;
-    private ImageView ivFotoPerfil;
-    private Button btnCerrarSesion, btnEliminarCuenta, btnIniciarSesion;
-
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +31,12 @@ public class UserActivity extends AppCompatActivity {
         }
 
         //Relacionar variables con id del XML.
-        tvNombre = findViewById(R.id.tvNombre);
-        tvEmail = findViewById(R.id.tvEmail);
-        ivFotoPerfil = findViewById(R.id.ivFotoPerfil);
-        btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
-        btnEliminarCuenta = findViewById(R.id.btnEliminarCuenta);
-        btnIniciarSesion = findViewById(R.id.btnIniciarSesion);
+        TextView tvNombre = findViewById(R.id.tvNombre);
+        TextView tvEmail = findViewById(R.id.tvEmail);
+        ImageView ivFotoPerfil = findViewById(R.id.ivFotoPerfil);
+        Button btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
+        Button btnEliminarCuenta = findViewById(R.id.btnEliminarCuenta);
+        Button btnIniciarSesion = findViewById(R.id.btnIniciarSesion);
 
         //cargar usuario de la BBDD con los datos que tiene en su cuenta de GMail.
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();

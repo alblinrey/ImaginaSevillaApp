@@ -1,5 +1,6 @@
 package com.example.imaginasevillaapp.activities;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -17,10 +18,10 @@ import java.util.ArrayList;
 
 public class ExtrasActivity extends AppCompatActivity {
 
-    private FirebaseFirestore db;
     private ArrayList<Monumentos> listaExtras;
     private MonumentoAdapter adapter;
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +33,7 @@ public class ExtrasActivity extends AppCompatActivity {
         }
 
         // Inicializar Firestore
-        db = FirebaseFirestore.getInstance();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         // Configurar RecyclerView
         RecyclerView recyclerView = findViewById(R.id.recyclerViewExtras);
@@ -40,14 +41,11 @@ public class ExtrasActivity extends AppCompatActivity {
 
         // Lista y Adapter
         listaExtras = new ArrayList<>();
-        adapter = new MonumentoAdapter(listaExtras, new MonumentoAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(Monumentos monumento) {
-                // Ir a DetalleExtraActivity con el ID del documento
-                Intent intent = new Intent(ExtrasActivity.this, DetalleExtraActivity.class);
-                intent.putExtra("documentId", monumento.getId());
-                startActivity(intent);
-            }
+        adapter = new MonumentoAdapter(listaExtras, monumento -> {
+            // Ir a DetalleExtraActivity con el ID del documento
+            Intent intent = new Intent(ExtrasActivity.this, DetalleExtraActivity.class);
+            intent.putExtra("documentId", monumento.getId());
+            startActivity(intent);
         });
 
         recyclerView.setAdapter(adapter);
@@ -59,6 +57,7 @@ public class ExtrasActivity extends AppCompatActivity {
                     for (DocumentSnapshot doc : queryDocumentSnapshots) {
                         Monumentos monumento = doc.toObject(Monumentos.class);
                         // Agregar el monumento a la lista y su ID
+                        assert monumento != null;
                         monumento.setId(doc.getId()); // Aquí guardamos el ID
                         listaExtras.add(monumento);
                     }

@@ -1,5 +1,7 @@
 package com.example.imaginasevillaapp.activities;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -20,12 +22,17 @@ public class DetalleExtraActivity extends AppCompatActivity {
     private TextView tvNombre, tvDescripcion, tvDireccion, tvHorarios, tvPrecio, tvInfo, tvWeb;
     private ImageView ivImagen;
     private WebView wvMapa;
-    private FirebaseFirestore db;
 
+    @SuppressLint({"SetJavaScriptEnabled", "SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_extra); // Aquí usa el XML correspondiente
+
+        //Esto hace que en el ActionBar exista una flecha como Up Button.
+        if (getSupportActionBar() !=null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         // Referencias UI
         tvNombre = findViewById(R.id.tvNombre);
@@ -43,7 +50,7 @@ public class DetalleExtraActivity extends AppCompatActivity {
         ws.setJavaScriptEnabled(true);
 
         // Inicializar Firestore
-        db = FirebaseFirestore.getInstance();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         // Obtener el ID del documento desde el Intent
         String documentId = getIntent().getStringExtra("documentId");
@@ -85,8 +92,16 @@ public class DetalleExtraActivity extends AppCompatActivity {
                 wvMapa.loadData(html, "text/html", "utf-8");
             }
 
-        }).addOnFailureListener(e -> {
-            Toast.makeText(this, "Error al cargar datos", Toast.LENGTH_SHORT).show();
-        });
+        }).addOnFailureListener(e -> Toast.makeText(this, "Error al cargar datos", Toast.LENGTH_SHORT).show());
+    }
+    // Metodo de AppCompatActivity para que la el up button del Action Bar retroceda, en este caso
+    //lo dirigimos al HomeMain.
+    @Override
+    public boolean onSupportNavigateUp() {
+        // Al pulsar la flechita, volver siempre al HomeMain
+        Intent intent = new Intent(this, HomeMain.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+        return true;
     }
 }

@@ -14,6 +14,7 @@ import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.Marker;
 
+/** @noinspection deprecation*/
 public class AlojamientoActivity extends AppCompatActivity {
 
     @Override

@@ -1,5 +1,6 @@
 package com.example.imaginasevillaapp.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.widget.TextView;
@@ -14,6 +15,11 @@ public class EventosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eventos);
+
+        //Esto hace que en el ActionBar exista una flecha como Up Button.
+        if (getSupportActionBar() !=null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         TextView texto = findViewById(R.id.textoEventos);
         ImageView imagen = findViewById(R.id.imagenEventos);
@@ -42,5 +48,15 @@ public class EventosActivity extends AppCompatActivity {
 
         texto.setText(Html.fromHtml(contenido, Html.FROM_HTML_MODE_LEGACY));
         imagen.setImageResource(R.drawable.collage_eventos); // Imagen destacada de los eventos
+    }
+    // Metodo de AppCompatActivity para que la el up button del Action Bar retroceda, en este caso
+    //lo dirigimos al HomeMain.
+    @Override
+    public boolean onSupportNavigateUp() {
+        // Al pulsar la flechita, volver siempre al HomeMain
+        Intent intent = new Intent(this, HomeMain.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+        return true;
     }
 }

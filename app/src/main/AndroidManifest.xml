@@ -15,8 +15,8 @@
         android:theme="@style/Theme.ImaginaSevilla"
         tools:targetApi="31">
 
-        <activity
-            android:name=".activities.HomeMain"
+        <!-- Primero salta el Splash Screen y luego se lanza el HomeMain -->
+        <activity android:name=".activities.SplashScreenActivity"
             android:exported="true">
 
             <intent-filter>
@@ -24,8 +24,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.HomeMain"
+            android:exported="true">
 
-        </activity> <!-- Actividad de la tarjetas -->
+            <!-- Actividad de la tarjetas -->
+        </activity>
         <activity android:name=".activities.ImprescindiblesActivity" />
         <activity android:name=".activities.AlojamientoActivity" />
         <activity android:name=".activities.EventosActivity" />
@@ -39,7 +44,6 @@
         <activity android:name=".activities.UserActivity" />
         <activity android:name=".activities.ExtrasActivity" />
         <activity android:name=".activities.FormActivity" />
-
 
         <meta-data
             android:name="preloaded_fonts"

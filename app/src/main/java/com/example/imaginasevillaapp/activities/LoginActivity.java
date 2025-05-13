@@ -2,15 +2,10 @@ package com.example.imaginasevillaapp.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.imaginasevillaapp.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -88,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                         FirebaseUser user = mAuth.getCurrentUser(); //Se obtiene el usuario desde firebase y se muestra una alerta para confirmar el inicio de sesión.
                         new AlertDialog.Builder(this)
                                 .setTitle("Inicio de sesión")
-                                .setMessage("¡Bienvenido " + user.getDisplayName() + "!\nTu sesión se ha iniciado correctamente.")
+                                .setMessage("¡Bienvenido " + (user != null ? user.getDisplayName() : null) + "!\nTu sesión se ha iniciado correctamente.")
                                 .setPositiveButton("Continuar", (dialog, which) -> {
                                     startActivity(new Intent(LoginActivity.this, ExtrasActivity.class)); //se inicia sesion y lleva al Extras.
                                     finish();

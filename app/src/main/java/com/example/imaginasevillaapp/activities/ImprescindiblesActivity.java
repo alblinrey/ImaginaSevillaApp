@@ -2,14 +2,13 @@ package com.example.imaginasevillaapp.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.example.imaginasevillaapp.R;
 
+/** @noinspection NonAsciiCharacters*/
 public class ImprescindiblesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,41 +22,29 @@ public class ImprescindiblesActivity extends AppCompatActivity {
 
         //Hacer que la tarjeta realAlcazar funcione al hacer click.
         CardView cardAlcazar = findViewById(R.id.cardrealAlcazar);
-        cardAlcazar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ImprescindiblesActivity.this, AlcazarActivity.class);
-                startActivity(intent);
-            }
+        cardAlcazar.setOnClickListener(v -> {
+            Intent intent = new Intent(ImprescindiblesActivity.this, AlcazarActivity.class);
+            startActivity(intent);
         });
 
         //Tarjeta catedral.
         CardView cardCatedral = findViewById(R.id.cardCatedral);
-        cardCatedral.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ImprescindiblesActivity.this, CatedralActivity.class);
-                startActivity(intent);
-            }
+        cardCatedral.setOnClickListener(v -> {
+            Intent intent = new Intent(ImprescindiblesActivity.this, CatedralActivity.class);
+            startActivity(intent);
         });
 
         //Tarjeta Plaza España y Parque María Luisa.
         CardView cardPlazaEspaña = findViewById(R.id.cardPlazaEspaña);
-        cardPlazaEspaña.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ImprescindiblesActivity.this, PlazaActivity.class);
-                startActivity(intent);
-            }
+        cardPlazaEspaña.setOnClickListener(v -> {
+            Intent intent = new Intent(ImprescindiblesActivity.this, PlazaActivity.class);
+            startActivity(intent);
         });
         //Tarjeta Torre del Oro.
         CardView cardTorre = findViewById(R.id.cardTorreOro);
-        cardTorre.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ImprescindiblesActivity.this, TorreActivity.class);
-                startActivity(intent);
-            }
+        cardTorre.setOnClickListener(v -> {
+            Intent intent = new Intent(ImprescindiblesActivity.this, TorreActivity.class);
+            startActivity(intent);
         });
     }
     // Metodo de AppCompatActivity para que la el up button del Action Bar retroceda, en este caso

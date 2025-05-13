@@ -1,5 +1,6 @@
 package com.example.imaginasevillaapp.activities;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebSettings;
@@ -21,8 +22,8 @@ public class AlcazarActivity extends AppCompatActivity {
     private TextView tvNombre, tvDescripcion, tvDireccion, tvHorarios, tvPrecio, tvInfo, tvWeb;
     private ImageView ivImagen;
     private WebView wvMapa;
-    private FirebaseFirestore db;
 
+    @SuppressLint({"SetTextI18n", "SetJavaScriptEnabled"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +50,7 @@ public class AlcazarActivity extends AppCompatActivity {
         ws.setJavaScriptEnabled(true);
 
         // Inicializar Firestore
-        db = FirebaseFirestore.getInstance();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         // Cargar documento "real_alcazar" de la colección "monumentos"
         DocumentReference docRef = db.collection("monumentos")
@@ -86,9 +87,7 @@ public class AlcazarActivity extends AppCompatActivity {
                 wvMapa.loadData(html, "text/html", "utf-8");
             }
 
-        }).addOnFailureListener(e -> {
-            Toast.makeText(this, "Error al cargar datos", Toast.LENGTH_SHORT).show();
-        });
+        }).addOnFailureListener(e -> Toast.makeText(this, "Error al cargar datos", Toast.LENGTH_SHORT).show());
     }
     // Metodo de AppCompatActivity para que la el up button del Action Bar retroceda, en este caso
     //lo dirigimos al HomeMain.
