@@ -95,11 +95,11 @@ public class DetalleExtraActivity extends AppCompatActivity {
         }).addOnFailureListener(e -> Toast.makeText(this, "Error al cargar datos", Toast.LENGTH_SHORT).show());
     }
     // Metodo de AppCompatActivity para que la el up button del Action Bar retroceda, en este caso
-    //lo dirigimos al HomeMain.
+    //lo dirigimos al ExtrasActivity.
     @Override
     public boolean onSupportNavigateUp() {
         // Al pulsar la flechita, volver siempre al HomeMain
-        Intent intent = new Intent(this, HomeMain.class);
+        Intent intent = new Intent(this, ExtrasActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
         return true;

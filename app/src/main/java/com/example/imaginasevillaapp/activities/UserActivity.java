@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
@@ -26,7 +27,7 @@ public class UserActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user);
 
         //Esto hace que en el ActionBar exista una flecha como Up Button.
-        if (getSupportActionBar() !=null) {
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
@@ -67,6 +68,7 @@ public class UserActivity extends AppCompatActivity {
             btnIniciarSesion.setVisibility(View.VISIBLE);
         }
 
+        //Cierre de sesión.
         btnCerrarSesion.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
             Toast.makeText(this, "Sesión cerrada correctamente", Toast.LENGTH_SHORT).show();
@@ -74,25 +76,41 @@ public class UserActivity extends AppCompatActivity {
             finish();
         });
 
+        //Eliminación de la cuenta.
         btnEliminarCuenta.setOnClickListener(v -> {
             if (user != null) {
-                user.delete().addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        Toast.makeText(this, "Cuenta eliminada", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(this, HomeMain.class));
-                        finish();
-                    } else {
-                        Toast.makeText(this, "Error al eliminar la cuenta", Toast.LENGTH_SHORT).show();
-                    }
-                });
+
+                //Confirmar eliminación con un mensaje.
+                new AlertDialog.Builder(this)
+                        .setTitle("Confirmar Eliminación")
+                        .setMessage("¿Estás seguro de que deseas eliminar tu cuenta? Esta acción es irreversible.")
+                        .setPositiveButton("Eliminar", (dialog, which) -> user.delete().addOnCompleteListener(task -> {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(this, "Cuenta eliminada", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(this, HomeMain.class));
+                                finish();
+                            } else {
+                                Toast.makeText(this, "Error al eliminar la cuenta", Toast.LENGTH_SHORT).show();
+                            }
+                        }))
+                        //Botón de cancelar la eliminación de la cuenta.
+                        .setNegativeButton("Cancelar", (dialog, which) -> {
+                            // Acción a realizar si el usuario cancela la eliminación
+                            dialog.dismiss(); // Simplemente cierra el diálogo
+                            Toast.makeText(this, "Cuenta no eliminada", Toast.LENGTH_SHORT).show();
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert) //Icono de alerta.
+                        .show();
             }
         });
 
+        //Al hacer click en en Iniciar sesión lleva directo al LoginActivity.
         btnIniciarSesion.setOnClickListener(v -> {
             startActivity(new Intent(this, LoginActivity.class));
             finish();
         });
     }
+
     // Metodo de AppCompatActivity para que la el up button del Action Bar retroceda, en este caso
     //lo dirigimos al HomeMain.
     @Override

@@ -12,7 +12,7 @@ import com.example.imaginasevillaapp.R;
 @SuppressLint("CustomSplashScreen")
 public class SplashScreenActivity extends AppCompatActivity {
 
-    private static final int SPLASH_TIME_OUT = 3000; // Tiempo en milisegundos (3 segundos)
+    private static final int SPLASH_TIME_OUT = 2500; // Tiempo en milisegundos (2.5 segundos)
 
 
     @Override
