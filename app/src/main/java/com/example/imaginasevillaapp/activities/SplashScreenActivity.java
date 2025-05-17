@@ -28,7 +28,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         new Handler().postDelayed(() -> {
             // Este código se ejecutará después del tiempo definido en SPLASH_TIME_OUT
-            Intent i = new Intent(SplashScreenActivity.this, HomeMain.class); // Reemplaza TuActividadPrincipal.class con el nombre de tu actividad principal
+            Intent i = new Intent(SplashScreenActivity.this, HomeMain.class);
             startActivity(i);
             finish(); // Cierra la SplashScreenActivity para que el usuario no pueda volver atrás fácilmente
         }, SPLASH_TIME_OUT);

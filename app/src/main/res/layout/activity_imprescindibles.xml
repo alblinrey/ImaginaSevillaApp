@@ -6,7 +6,7 @@
     android:padding="16dp"
     android:background="#274A7E8A">
 
-    <!-- ScrollView para todo el contenido -->
+    <!-- ScrollView para que sea posible hacer scroll. -->
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Contenedor vertical para todo el contenido desplazable -->
+        <!-- Contenedor vertical. -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -45,12 +45,6 @@
                     android:textColor="@color/bright_blue"
                     android:textSize="20sp" />
 
-                <ImageView
-                    android:id="@+id/iconImprescindibles"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/imprescindibles"
-                    android:layout_gravity="end" />
             </LinearLayout>
 
             <!-- Tarjeta Alcázar -->

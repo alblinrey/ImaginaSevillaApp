@@ -117,12 +117,7 @@ public class LoginActivity extends AppCompatActivity {
         firestore.collection("usuarios").document(user.getUid())
                 .set(usuario, SetOptions.merge())
                 .addOnSuccessListener(aVoid -> {
-                    // La información del usuario se guardó correctamente en Firestore
-                    Toast.makeText(this, "Información de usuario guardada en Firestore", Toast.LENGTH_SHORT).show();
-                })
-                .addOnFailureListener(e -> {
-                    // Hubo un error al guardar la información del usuario
-                    Toast.makeText(this, "Error al guardar información en Firestore", Toast.LENGTH_SHORT).show();
+
                 });
     }
 
