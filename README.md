@@ -1,3 +1,5 @@
+![Sin título (1280 x 640 px)](https://github.com/user-attachments/assets/12f78cb3-091c-46d6-8e8a-731bd04c81c1)
+
 # 📱 IMAGINA SEVILLA
 
 **IMAGINA SEVILLA** es una aplicación móvil Android desarrollada como **Trabajo de Fin de Grado** para el ciclo formativo de 
