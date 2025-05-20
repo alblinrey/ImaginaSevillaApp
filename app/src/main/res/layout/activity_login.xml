@@ -4,9 +4,9 @@
     android:id="@+id/login_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="#274A7E8A"
+    android:gravity="center"
+    android:orientation="vertical"
     android:padding="32dp">
 
 
@@ -15,16 +15,18 @@
         android:id="@+id/imagenLlegada"
         android:layout_width="250dp"
         android:layout_height="250dp"
+        android:contentDescription="@string/foto_collage_sevilla"
         android:scaleType="centerCrop"
-        android:src="@drawable/collage_sevilla" />
+        android:src="@drawable/collage_sevilla"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/textIntro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_semibold"
-        android:paddingBottom="10dp"
         android:paddingTop="24dp"
+        android:paddingBottom="10dp"
         android:text="@string/texto_login"
         android:textAlignment="center"
         android:textColor="@color/letrastarjetas"
@@ -36,4 +38,13 @@
         android:id="@+id/btnGoogleSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/boton_user_logueado"
+        android:visibility="gone" />
+
 </LinearLayout>

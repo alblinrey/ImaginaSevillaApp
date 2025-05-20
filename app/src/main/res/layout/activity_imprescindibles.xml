@@ -41,7 +41,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="@string/imprescindibles"
+                    android:text="@string/imprescindibles1"
                     android:textColor="@color/bright_blue"
                     android:textSize="20sp" />
 

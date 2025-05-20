@@ -1,7 +1,8 @@
 <resources>
 
     <string name="app_name">Imagina Sevilla</string>
-    <string name="imprescindibles">Imprescindibles 🏆 </string>
+    <string name="imprescindibles">Imprescindibles</string>
+    <string name="imprescindibles1">Imprescindibles 🏆 </string>
     <string name="imprescindibles_desc">Icono de la sección Imprescindibles</string>
     <string name="alojamiento">¿Dónde alojarme?</string>
     <string name="alojamiento_desc">Icono de la sección alojamiento</string>
@@ -41,6 +42,8 @@
     <string name="cerrarSesion">Cerrar sesión</string>
     <string name="inicioSesionUser">Iniciar sesión</string>
     <string name="descripcion_Splash">TODO</string>
+    <string name="boton_user_logueado">Usuario</string>
+    <string name="foto_collage_sevilla">foto collage Sevilla</string>
 
 
 </resources>
