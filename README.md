@@ -1,4 +1,3 @@
-![Sin título (1280 x 640 px) (950 x 500 px)](https://github.com/user-attachments/assets/3546def5-dcb0-4f6f-bca4-c02b048f1cc8)
 
 # 📱 IMAGINA SEVILLA
 
@@ -43,6 +42,9 @@ Este proyecto es propiedad exclusiva de **Alberto Linero Reyes** y ha sido desar
 - **Todos los derechos reservados.**
 - Se prohíbe expresamente la copia, distribución, modificación o uso comercial de este código sin el consentimiento por escrito del autor.
 - Para cualquier consulta, contactar con: alberto.lineroreyes@gmail.com.
+
+![Sin título (1280 x 640 px) (950 x 500 px)](https://github.com/user-attachments/assets/3546def5-dcb0-4f6f-bca4-c02b048f1cc8)
+
 
 
 
