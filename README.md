@@ -1,4 +1,4 @@
-![Sin título (1280 x 640 px)](https://github.com/user-attachments/assets/12f78cb3-091c-46d6-8e8a-731bd04c81c1)
+![Sin título (1280 x 640 px) (950 x 500 px)](https://github.com/user-attachments/assets/3546def5-dcb0-4f6f-bca4-c02b048f1cc8)
 
 # 📱 IMAGINA SEVILLA
 
