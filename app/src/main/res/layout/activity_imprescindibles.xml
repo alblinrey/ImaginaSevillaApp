@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="#274A7E8A">
+    android:background="#274A7E8A"
+    android:fitsSystemWindows="true">
 
     <!-- ScrollView para que sea posible hacer scroll. -->
     <ScrollView

@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:background="#274A7E8A"
+    android:fitsSystemWindows="true"
     tools:context=".activities.ExtrasActivity">
 
     <!-- Texto encima del listado de items de los extras -->
@@ -21,6 +22,7 @@
         android:background="#887E2770"
         android:padding="12dp"
         android:layout_marginBottom="12dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:contentDescription="@string/cabeceraDescription" />
 

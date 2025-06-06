@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="#274A7E8A">
+    android:background="#274A7E8A"
+    android:fitsSystemWindows="true">
 
     <LinearLayout
         android:orientation="vertical"
@@ -18,7 +19,8 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="#2979FF"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="20dp"/>
 
         <!-- Imagen -->
         <ImageView
